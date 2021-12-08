@@ -1,0 +1,2 @@
+# hatenablog-textlint
+はてなブログの記事にtextlintを適用するプログラム
