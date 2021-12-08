@@ -1,5 +1,6 @@
 import fetch from 'node-fetch';
 import { XMLParser } from 'fast-xml-parser';
+import { TextLintEngine } from 'textlint';
 import * as dotnev from 'dotenv';
 dotnev.config();
 
@@ -38,5 +39,15 @@ type BlogData = {
     }).then(res => res.text());
     const xmlParser = new XMLParser();
     const data = xmlParser.parse(xml) as BlogData;
-    console.log(data.entry.content.split('\n').filter(l => l !== ''));
+
+    const engine = new TextLintEngine();
+    const rows: string[] = data.entry.content.split('\n').filter(l => l !== '');
+    rows.forEach(async r => {
+        const results = await engine.executeOnText(r);
+        results.forEach(result => {
+            result.messages.forEach(message => {
+                console.log(message.message);
+            });
+        });
+    });
 })();
