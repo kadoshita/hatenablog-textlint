@@ -1,0 +1,30 @@
+{
+  "name": "hatenablog-textlint",
+  "version": "1.0.0",
+  "description": "はてなブログの記事にtextlintを適用するプログラム",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "ts-node-dev main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kadoshita/hatenablog-textlint.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kadoshita/hatenablog-textlint/issues"
+  },
+  "homepage": "https://github.com/kadoshita/hatenablog-textlint#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fast-xml-parser": "^4.0.0-beta.6",
+    "node-fetch": "^2.6.6"
+  }
+}
