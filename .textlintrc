@@ -1,5 +1,12 @@
 {
     "rules": {
-        "preset-ja-technical-writing": true
+        "preset-ja-technical-writing": true,
+        "no-dropping-the-ra": true,
+        "@textlint-ja/textlint-rule-no-dropping-i": true,
+        "no-doubled-joshi": true,
+        "ja-no-redundant-expression": true,
+        "ja-no-orthographic-variants": true,
+        "@textlint-ja/no-synonyms": true,
+        "preset-ja-spacing": true
     }
 }
